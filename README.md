@@ -1,66 +1,46 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+<p><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="300" alt="Laravel Logo"></a> <a href="https://php-ml.org/" target="_blank"><img src="https://php-ml.org/wp-content/uploads/2021/03/php-ml-logo-02-e1615183871707.png" alt="PHP ML Logo" width="300"></a></p>
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
+
+# Learning Machine Learning
+
+## Table of Contents
+
+- [My journey](#my-journey)
+    - [Why I am learning machine learning](#why-i-am-learning-machine-learning)
+- [What I plan to do](#what-i-plan-to-do)
+    - [Forecasted steps](#forecasted-steps)
+    - [Milestones](#milestones)
+
+## My journey 
+
+In this repo, you will find my journey in learning machine learning. I will be using the [PHP-ML](https://php-ml.org/) library to learn the basics of machine learning. I will be using the [Laravel](https://laravel.com/) framework to build a simple web application to test the machine learning algorithms.
+
+### Why I am learning machine learning
+
+I have been fascinated by machine learning for a while now. I have been reading about it and (ab)using already existing AIs, such as [ChatGPT](https://openai.com/blog/chatgpt), [Computer Vision](https://azure.microsoft.com/en-us/products/cognitive-services/vision-services) and have had a lot of fun transforming me into a [LoTR](https://en.wikipedia.org/wiki/The_Lord_of_the_Rings) character. <br>
+But this is not sufficient, enough, for me. I've always been a curious and a creative person. I want to know how these things work. I want to know how to build them. I also wish that, someday, I can build something that can help people. People like me, who struggle with speaking "correctly" with non-intimate people. <br>
+
+## What I plan to do
+
+I plan to build a simple web application that will be able to detect the tone of a text. The application will be able to detect if the text is positive, negative or neutral. <br>
+Or, at least, this is the first step I want to achieve in my journey. 
+
+### Forecasted steps
+
+- [x] **Learn the basics of _Laravel_**
+- [ ] Learn the basics of *machine learning*
+- [ ] Learn the basics of **_PHP-ML_**
+- [ ] Learn the basics of _Statistical Programming_
+- [ ] Build a simple web application that will be able to predict **basic** stuff
+- [ ] Build a simple web application that will be able to predict **more complex**stuff.
+
+### Milestones
+
+   <p align="center"><img width="150" src="https://upload.wikimedia.org/wikipedia/commons/d/d5/Hey_Machine_Learning_Logo.png" alt="Milestones">
+
+|    Date    |             Description             |
+|:----------:|:-----------------------------------:|
+| 03/17/2023 | Initial release of this repository. |
+| 03/17/2023 |           Initial commit.           |
+
 </p>
-
-## About Laravel
-
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
-
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
-
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
-
-## Learning Laravel
-
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
-
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
-
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
-
-## Laravel Sponsors
-
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
-
-### Premium Partners
-
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
