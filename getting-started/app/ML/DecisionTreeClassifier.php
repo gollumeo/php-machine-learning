@@ -1,6 +1,7 @@
 <?php
 
 namespace App\ML;
+
 use Phpml\Classification\DecisionTree;
 use Phpml\Dataset\ArrayDataset;
 use Phpml\Exception\FileException;
@@ -8,8 +9,7 @@ use Phpml\Exception\InvalidArgumentException;
 use Phpml\Exception\SerializeException;
 use Phpml\ModelManager;
 
-
-class DecisionTressClassifier
+class DecisionTreeClassifier
 {
     protected $model;
 
@@ -25,12 +25,15 @@ class DecisionTressClassifier
      */
     public function train($samples, $labels)
     {
+        $samples = array_map(fn($sample) => [$sample], $samples);
+//        $labels = array_map(fn($label) => [$label], $labels);
+
         $dataset = new ArrayDataset($samples, $labels);
-        $this->model->train($dataset);
+        $this->model->train($dataset->getSamples(), $dataset->getTargets());
 
         // Save the trained model
         $modelManager = new ModelManager();
-        $modelManager->saveToFile($this->model, storage_path('app\decision_tree_model.txt'));
+        $modelManager->saveToFile($this->model, storage_path('app/decision_tree_model.txt'));
     }
 
     /**
@@ -41,7 +44,7 @@ class DecisionTressClassifier
     {
         // Load the trained model
         $modelManager = new ModelManager();
-        $this->model = $modelManager->restoreFromFile(storage_path('app\decision_tree_model.txt'));
+        $this->model = $modelManager->restoreFromFile(storage_path('app/decision_tree_model.txt'));
 
         return $this->model->predict($samples);
     }

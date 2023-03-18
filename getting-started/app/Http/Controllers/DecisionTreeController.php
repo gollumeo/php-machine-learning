@@ -2,83 +2,72 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Contracts\Foundation\Application;
+use Illuminate\Contracts\Routing\ResponseFactory;
 use Illuminate\Http\Request;
+use App\ML\DecisionTreeClassifier;
+use Illuminate\Http\Response;
+use Phpml\Exception\FileException;
+use Phpml\Exception\InvalidArgumentException;
+use Phpml\Exception\SerializeException;
+use Phpml\ModelManager;
 
 class DecisionTreeController extends Controller
 {
     /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
+     * @return Application|ResponseFactory|Response
+     * @throws FileException
+     * @throws InvalidArgumentException
+     * @throws SerializeException
      */
-    public function index()
+    public function trainDecisionTree(): Response|Application|ResponseFactory
     {
-        //
+        $samples = ["I'm so happy!", "Yay, I got a job!", "This is terrible", "I'm so sad", "Yay, it's raining!", "I hate it"];
+
+        // Preprocess samples
+        $preprocessed_samples = [];
+        foreach ($samples as $sample) {
+            // Remove punctuation
+            $sample = preg_replace("/[^a-zA-Z\s]/", "", $sample);
+            // Add preprocessed sample to array
+            $preprocessed_samples[] = $sample;
+        }
+
+        // Check if preprocessed samples array is not empty and is an array
+        if (!empty($preprocessed_samples) && is_array($preprocessed_samples)) {
+            $labels = ["positive", "positive", "negative", "negative", "neutral", "negative"];
+
+            $classifier = new DecisionTreeClassifier();
+            $classifier->train($preprocessed_samples, $labels);
+
+            return response('Decision tree model trained and saved.');
+        } else {
+            return response('Error: preprocessed samples is empty or not an array.');
+        }
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
 
     /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
+     * @throws SerializeException
+     * @throws FileException
      */
-    public function store(Request $request)
+    public function predictDecisionTree(): string
     {
-        //
+        // Load the trained model from the file
+        $modelManager = new ModelManager();
+        $decisionTreeClassifier = $modelManager->restoreFromFile(storage_path('app/decision_tree_model.txt'));
+
+// Define the sentence to predict its label
+        $sentence = "I hate sunny days";
+
+// Preprocess the sentence
+        $sentence = preg_replace("/[^a-zA-Z\s]/", "", $sentence);
+
+// Predict the label of the sentence
+        $predictedLabel = $decisionTreeClassifier->predict([$sentence]);
+
+// Print the predicted label
+        return "The predicted label for the sentence '$sentence' is: $predictedLabel";
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
-    }
 }

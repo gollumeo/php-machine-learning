@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\DecisionTreeController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,3 +17,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/train', [DecisionTreeController::class, 'trainDecisionTree']);
+
+Route::get('/predict', [DecisionTreeController::class, 'predictDecisionTree']);

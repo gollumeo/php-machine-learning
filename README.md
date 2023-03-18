@@ -38,9 +38,11 @@ Or, at least, this is the first step I want to achieve in my journey.
 
    <p align="center"><img width="150" src="https://upload.wikimedia.org/wikipedia/commons/d/d5/Hey_Machine_Learning_Logo.png" alt="Milestones"></p>
 
-|    Date    |             Description             |
-|:----------:|:-----------------------------------:|
-| 03/17/2023 | Initial release of this repository. |
-| 03/17/2023 |           Initial commit.           |
+|    Date    |           Description                          |
+|:----------:|:----------------------------------------------:|
+| 03/17/2023 |      Initial release of this repository.       |
+| 03/17/2023 |                Initial commit.                 |
+| 03/18/2023 |      First training: binary combinations       |
+| 03/18/2023 | Second training: positive or negative sentence |
 
 
