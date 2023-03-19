@@ -17,7 +17,7 @@ In this repo, you will find my journey in learning machine learning. I will be u
 
 ### Why I am learning machine learning
 
-I have been fascinated by machine learning for a while now. I have been reading about it and (ab)using already existing AIs, such as [ChatGPT](https://openai.com/blog/chatgpt), [Computer Vision](https://azure.microsoft.com/en-us/products/cognitive-services/vision-services) and have had a lot of fun transforming me into a [LoTR](https://en.wikipedia.org/wiki/The_Lord_of_the_Rings) character. <br>
+I have been fascinated by machine learning for a while now. I have been reading about it and (ab)using already existing AIs, such as [ChatGPT](https://openai.com/blog/chatgpt), [Computer Vision](https://azure.microsoft.com/en-us/products/cognitive-services/vision-services) and have had a lot of fun transforming me into a [LoTR](https://en.wikipedia.org/wiki/The_Lord_of_the_Rings) character using [Midjourney](https://www.midjourney.com/home/?callbackUrl=%2Fapp%2F). <br>
 But this is not sufficient, enough, for me. I've always been a curious and a creative person. I want to know how these things work. I want to know how to build them. I also wish that, someday, I can build something that can help people. People like me, who struggle with speaking "correctly" with non-intimate people. <br>
 
 ## What I plan to do
