@@ -22,7 +22,7 @@ class DecisionTreeController extends Controller
      */
     public function trainDecisionTree(): Response|Application|ResponseFactory
     {
-        $samples = ["I'm so happy!", "Yay, I got a job!", "This is terrible", "I'm so sad", "Yay, it's raining!", "I hate it"];
+        $samples = ["I'm so happy!", "Yay, I got a job!", "This is terrible", "I'm so sad", "Yay, it's raining!", "I hate it", "I enjoy something"];
 
         // Preprocess samples
         $preprocessed_samples = [];
@@ -35,7 +35,7 @@ class DecisionTreeController extends Controller
 
         // Check if preprocessed samples array is not empty and is an array
         if (!empty($preprocessed_samples) && is_array($preprocessed_samples)) {
-            $labels = ["positive", "positive", "negative", "negative", "neutral", "negative"];
+            $labels = ["positive", "positive", "negative", "negative", "neutral", "negative", "positive"];
 
             $classifier = new DecisionTreeClassifier();
             $classifier->train($preprocessed_samples, $labels);
@@ -57,16 +57,16 @@ class DecisionTreeController extends Controller
         $modelManager = new ModelManager();
         $decisionTreeClassifier = $modelManager->restoreFromFile(storage_path('app/decision_tree_model.txt'));
 
-// Define the sentence to predict its label
-        $sentence = "I hate sunny days";
+        // Define the sentence to predict its label
+        $sentence = "I enjoy video games";
 
-// Preprocess the sentence
+        // Preprocess the sentence
         $sentence = preg_replace("/[^a-zA-Z\s]/", "", $sentence);
 
-// Predict the label of the sentence
+        // Predict the label of the sentence
         $predictedLabel = $decisionTreeClassifier->predict([$sentence]);
 
-// Print the predicted label
+        // Print the predicted label
         return "The predicted label for the sentence '$sentence' is: $predictedLabel";
     }
 

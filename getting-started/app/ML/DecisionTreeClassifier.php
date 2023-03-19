@@ -26,8 +26,6 @@ class DecisionTreeClassifier
     public function train($samples, $labels)
     {
         $samples = array_map(fn($sample) => [$sample], $samples);
-//        $labels = array_map(fn($label) => [$label], $labels);
-
         $dataset = new ArrayDataset($samples, $labels);
         $this->model->train($dataset->getSamples(), $dataset->getTargets());
 
