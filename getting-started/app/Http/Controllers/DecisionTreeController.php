@@ -58,7 +58,7 @@ class DecisionTreeController extends Controller
         $decisionTreeClassifier = $modelManager->restoreFromFile(storage_path('app/decision_tree_model.txt'));
 
         // Define the sentence to predict its label
-        $sentence = "I enjoy video games";
+        $sentence = "I have a job!";
 
         // Preprocess the sentence
         $sentence = preg_replace("/[^a-zA-Z\s]/", "", $sentence);
